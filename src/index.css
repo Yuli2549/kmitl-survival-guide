@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* 1. กำหนดตัวแปรสีแยกตามโหมด (สว่าง / มืด) */
+@layer base {
+  :root {
+    /* ☀️ โหมดสว่าง */
+    --bg-main: #FFF5F2;       /* พื้นหลังหลัก */
+    --text-main: #2D0F05;     /* ตัวอักษรหลัก */
+    --card-bg: #FFFFFF;       /* กล่องการ์ด */
+    --border-main: #F2D8CC;   /* เส้นขอบ */
+  }
+
+  .dark {
+    /* 🌙 โหมดมืด (อ้างอิงจากรูปหน้า Wellness และ Home) */
+    --bg-main: #2D0F05;       /* พื้นหลังน้ำตาลเข้ม */
+    --text-main: #FFF5F2;     /* ตัวอักษรสีสว่าง */
+    --card-bg: #401B0F;       /* กล่องการ์ดสีน้ำตาลที่สว่างกว่าพื้นหลังนิดนึง */
+    --border-main: #5C2A18;   /* เส้นขอบโหมดมืด */
+  }
+}
+
+@theme {
+  /* สีหลัก (Primary) ของแบรนด์ ยังคงเดิม */
+  --color-primary: #F24E1E;
+  --color-primary-dark: #C43006;
+
+  /* 2. นำตัวแปรจากข้างบนมาผูกให้ Tailwind สร้างคลาสให้ */
+  /* คลาสที่จะได้คือ: bg-base, text-base, bg-card, border-card */
+  --color-base: var(--bg-main);
+  --color-text-base: var(--text-main);
+  --color-card: var(--card-bg);
+  --color-border-card: var(--border-main);
+
+  /* ตั้งค่า Font ให้ตรงกับ Config เดิม */
+  --font-display: 'Lexend', 'Noto Sans Thai', sans-serif;
+  --font-body: 'Lexend', 'Noto Sans Thai', sans-serif;
+}
+
+/* 🎯 บังคับหน้าจอกว้าง 100% เสมอ และเซ็ตสีเริ่มต้น */
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  
+  /* 3. ผูกสีพื้นหลังและสีตัวอักษรของทั้งเว็บ */
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  
+  /* 4. ใส่ Transition เวลากดสลับโหมด สีจะค่อยๆ เปลี่ยนนุ่มๆ */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: 'Lexend', 'Noto Sans Thai', sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
