@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/kmitl-survival-guide">
       <div className="flex flex-col min-h-screen bg-background-light">
         
         {/* 👈 เรียกใช้ Navbar ตรงนี้! มันจะลอยอยู่บนสุดของทุกหน้า */}

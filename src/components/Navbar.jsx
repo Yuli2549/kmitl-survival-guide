@@ -82,7 +82,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden flex flex-col px-4 pt-2 pb-6 border-b border-border-card bg-card shadow-lg transition-colors duration-300">
           <nav className="flex flex-col gap-2 mb-6 mt-2">
-            {['หน้าหลัก', 'แผนที่', 'ร้านอาหาร', 'หอพัก', 'ข่าวประชาสัมพันธ์', 'Coworking Space'].map(item => (
+            {['หน้าหลัก', 'แผนที่', 'ร้านอาหาร', 'หอพัก', 'ข่าวประชาสัมพันธ์', 'Co-working Space'].map(item => (
               <Link 
                 key={item} 
                 to={getPath(item)}

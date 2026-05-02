@@ -8,4 +8,6 @@ export default defineConfig({
     react(),
     tailwindcss(), // เรียกใช้ tailwind ตรงนี้
   ],
+
+  base: '/kmitl-survival-guide/',
 })
