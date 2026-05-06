@@ -193,7 +193,7 @@ const DormitorySectionHome = () => {
         </div>
         
         <div className="flex items-center gap-4">
-          <Link to="/dormitory" className="text-primary text-sm font-semibold hover:underline hidden md:flex items-center gap-1 transition-all">
+          <Link to="/dormitory" className="text-primary text-sm font-semibold hover:underline flex items-center gap-1 transition-all">
             ดูทั้งหมด <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
           </Link>
           <div className="flex gap-2">
@@ -287,7 +287,7 @@ const FoodSectionHome = () => {
         </div>
         
         <div className="flex items-center gap-4">
-          <Link to="/food" className="text-primary text-sm font-semibold hover:underline hidden md:flex items-center gap-1 transition-all">
+          <Link to="/food" className="text-primary text-sm font-semibold hover:underline flex items-center gap-1 transition-all">
             ดูทั้งหมด <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
           </Link>
           <div className="flex gap-2">
